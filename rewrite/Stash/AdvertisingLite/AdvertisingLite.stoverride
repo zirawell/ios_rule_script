@@ -1,11 +1,11 @@
 name: 复写去广告(严格版)
-desc: 最后更新时间 2024-05-02 02:14:58
+desc: 最后更新时间 2024-05-16 02:17:59
 # author: blackmatrix7
 # repo: https://github.com/blackmatrix7/ios_rule_script
-# reject: 1080
-# mitm: 800
+# reject: 1087
+# mitm: 804
 # force-http-engine-hosts: 6
-# total: 1886
+# total: 1897
 
 
 
@@ -50,6 +50,7 @@ http:
     - ^https:\/\/hdgateway\.zto\.com\/getApolloConfig - reject
     - ^https:\/\/hdgateway\.zto\.com\/listJumperShow - reject
     - ^https:\/\/hdgateway\.zto\.com\/track - reject
+    - ^https:\/\/imcs\.citicbank\.com\/cloud\/([a-fA-F0-9]{32})\.(jpg|png) - reject
     - ^https:\/\/imcs\.citicbank\.com\/cloud\/.+(1125.+2436|1242.+2688) - reject
     - ^https:\/\/img01\.51jobcdn\.com\/im\/mkt/(?:tg/((19|20)\d{2})banner/(?!jcgz2/)|\d{4}/bd/\d{4}/).*\.jpg - reject
     - ^https:\/\/live\.inst-service\.htsc\.com\/live - reject
@@ -69,6 +70,8 @@ http:
     - ^https:\/\/smarket\.dian\.so - reject
     - ^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) - reject
     - ^https:\/\/wxs-weixin\.sd\.zhumanggroup\.com\/api\/v2\/ad - reject
+    - ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/show - reject
+    - ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad - reject
     - ^https:\/\/zlsdk\.1rtb\.net\/sdk\/req_ad\?sdk_version=\d+\.\d+\.\d+\.\d+&device_os=iOS&accept_ad_type=\d+&app_id=\d+&pid=\d+&sdk_version_code=\d+ - reject
     - ^https?://advertise\.bczeducation\.cn\/rpc\/advertise - reject
     - ^https?://api-mifit-cn2\.zepp\.com/discovery/mi/cards/(startpage_ad|homepage_ad)\? - reject
@@ -148,6 +151,7 @@ http:
     - ^https?:\/\/agn\.aty\.sohu\.com\/m? - reject
     - ^https?:\/\/aimg\.babytreeimg\.com\/group1\/M00\/*\/*\/.*.jpg - reject
     - ^https?:\/\/als\.baidu\.com\/clog\/clog - reject
+    - ^https?:\/\/alt-r\.my\.com\/mobile - reject
     - ^https?:\/\/amap\-aos\-info\-nogw\.amap\.com\/ws\/aos\/alimama\/ - reject
     - ^https?:\/\/ams-cdn\.cdtft\.cn\/prod\/tft-ams\/ - reject
     - ^https?:\/\/ap\.dongqiudi\.com\/plat\/v - reject
@@ -322,6 +326,8 @@ http:
     - ^https?:\/\/app\.badmintoncn\.com\/mag\/operative\/v\d\/ad\/ - reject
     - ^https?:\/\/app\.badmintoncn\.com\/mag\/operative\/v\d\/ad\/listNotEndByPlace\?place=first_page - reject
     - ^https?:\/\/app\.c\.nf\.migu\.cn\/.*column\/start(-)?up-pic - reject
+    - ^https?:\/\/app\.ceair\.com\/customize\/main\/adScreen - reject
+    - ^https?:\/\/app\.ceair\.com\/customize\/security\/update - reject
     - ^https?:\/\/app\.chinahxzq\.com\.cn:9302\/starway-api\/ad - reject
     - ^https?:\/\/app\.chinahxzq\.com\.cn\/starway\/adShow - reject
     - ^https?:\/\/app\.ddpai\.com\/d\/api\/v\d\/config\/get\/bootscreen - reject
@@ -638,6 +644,7 @@ http:
     - ^https?:\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ - reject
     - ^https?:\/\/img\d\.doubanio\.com\/view\/dale-online\/dale_ad\/ - reject
     - ^https?:\/\/imgcache\.qq\.com\/qqlive\/ - reject
+    - ^https?:\/\/imgx\.jampp\.com\/imgsrv\/tn - reject
     - ^https?:\/\/impservice\.dictapp\.youdao\.com\/imp\/request - reject
     - ^https?:\/\/init\.sms\.mob\.com\/.*sdk\/init.* - reject
     - ^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec - reject
@@ -1034,6 +1041,7 @@ http:
     - ^https?:\/\/www\.cmbc\.com\.cn\/m\/image\/loadingpage\/ - reject
     - ^https?:\/\/www\.cntv\.com\/nettv\/adp\/ - reject
     - ^https?:\/\/www\.didapinche\.com\/app\/adstat\/ - reject
+    - ^https?:\/\/www\.flyert\.com\/.*\.php\?module=advis - reject
     - ^https?:\/\/www\.flyertea\.com\/source\/plugin\/mobile\/mobile\.php\?module=advis - reject
     - ^https?:\/\/www\.gcores\.com\/gapi\/v1\/app-start-pages\?page - reject
     - ^https?:\/\/www\.icourse163\.org\/mob\/j\/v1\/mobRecommendRPCBean\.getMaxWeightAdvertisement\.rpc - reject
@@ -1083,13 +1091,12 @@ http:
     - ^https?:\/\/ztoread\.ziroom\.com\/foka-card-api\/popup\/v2\/get - reject
     - ^https?:\/\/ztoread\.ziroom\.com\/ymerApi\/v\d\/index\/open - reject
     - ^https?:\/\/zua\.zhidiantianxia\.cn\/api\/adverts - reject
+    - http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 - reject
     - http:\/\/analytics\.163\.com\/ntes - reject
-    - https://alt-r.my.com/mobile - reject
     - https://api-global.soulapp.me/app/open/get - reject
     - https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON - reject
     - https://ci.xiaohongshu.com/system_config/watermark - reject
     - https://dynamicad.kfc.com.cn/api/app5/homepage/ai/popup - reject
-    - https://imgx.jampp.com/imgsrv/tn - reject
     - https://mgesq.api.mgtv.com/v2/user/center/icon - reject
     - https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? - reject
     - https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert\/skin) - reject
@@ -1126,6 +1133,7 @@ http:
     - "ad.life.360.cn"
     - "ad.lofter.com"
     - "ad.mcloud.139.com"
+    - "ad.myfriday.cn"
     - "ad.shunchangzhixing.com"
     - "ad.xiaotucc.com"
     - "ad.ysepay.com"
@@ -1284,6 +1292,7 @@ http:
     - "app.api.versa-ai.com"
     - "app.badmintoncn.com"
     - "app.c.nf.migu.cn"
+    - "app.ceair.com"
     - "app.chinahxzq.com.cn"
     - "app.ddpai.com"
     - "app.dewu.com"
@@ -1864,6 +1873,7 @@ http:
     - "www.cmbc.com.cn"
     - "www.cntv.com"
     - "www.didapinche.com"
+    - "www.flyert.com"
     - "www.flyertea.com"
     - "www.gcores.com"
     - "www.icourse163.org"
@@ -1884,6 +1894,7 @@ http:
     - "xapi.xinmanhua.net"
     - "xhtz.oss-cn-guangzhou.aliyuncs.com"
     - "xqimg.imedao.com"
+    - "xxyx-client-api.xiaoxiaoyouxuan.com"
     - "xyst.yuanfudao.com"
     - "xyz.cnki.net"
     - "y.gtimg.cn"
